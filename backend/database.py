@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine,text
+'''from sqlalchemy import create_engine,text
 from .schemas import Basic,Patient
 from .models import basic_info,meta,patient_info
 from sqlalchemy.sql import select
@@ -43,5 +43,5 @@ async def update_user(id: int, basic: Basic, patient: Patient):
 async def delete_user(id: int):
     engine.execute(basic_info.delete().where(basic_info.c.basic_id == id))
     engine.execute(patient_info.delete().where(patient_info.c.patient_id == id))
-    return f"Successfully deleted {basic_info.first_name}"
+    return f"Successfully deleted {basic_info.first_name}"'''
 
