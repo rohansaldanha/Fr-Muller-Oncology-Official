@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+'''from pydantic import BaseModel
 
 # for basic info table
 class Basic(BaseModel):
@@ -8,7 +8,7 @@ class Basic(BaseModel):
    age : int
    sex : str
    ipop_number : int
-
+   
 # for patient info table
 class Patient(BaseModel):
    height : int
@@ -122,4 +122,4 @@ class Assessment(BaseModel):
     d_final : int
     s_stage : int
     d_factors : int
-    d_tp : int 
+    d_tp : int '''
