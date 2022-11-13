@@ -21,7 +21,9 @@ basic_info = Table(
     Column('contact_no', String),
     Column('age', Integer),
     Column('sex', String),
-    Column('ipop_number', Integer)
+    Column('ipop_number', Integer),
+    Column('time_created', TIMESTAMP, server_default=func.now()),
+    Column('time_updated', TIMESTAMP, onupdate=func.now())
 )
 
 # Patient data table Structure
@@ -55,7 +57,9 @@ patient_info = Table(
     Column('bsa', Integer),
     Column('unhealthy_habits', Integer),
     Column('family_history', Integer),
-    Column('allergy', Integer)
+    Column('allergy', Integer),
+    Column('time_created', TIMESTAMP, server_default=func.now()),
+    Column('time_updated', TIMESTAMP, onupdate=func.now())
 )
 
 # Patient history table Structure
@@ -84,7 +88,9 @@ patient_history = Table(
     Column('psychiatric_disease', Integer),
     Column('d_psychiatric_disease', Integer),
     Column('previous_surgery', Integer),
-    Column('d_previous_surgery', Integer)
+    Column('d_previous_surgery', Integer),
+    Column('time_created', TIMESTAMP, server_default=func.now()),
+    Column('time_updated', TIMESTAMP, onupdate=func.now())
 )
 
 # complaint table Structure
@@ -98,18 +104,19 @@ complaint_info = Table(
             primary_key=True,
             unique=True,
             nullable=False),
-    Column('complaint_id', Integer, nullable=False, primary_key=True, index=True, autoincrement=False),
     Column('datetime', Integer),
     Column('duration', Integer),
-    Column('severity', Integer)
+    Column('severity', Integer),
+    Column('time_created', TIMESTAMP, server_default=func.now()),
+    Column('time_updated', TIMESTAMP, onupdate=func.now())
 )
 
 # c examination table Structure
 c_examination = Table(
     'c_examination', meta,
-    Column('complaint_id',
+    Column('patient_id',
             Integer, 
-            ForeignKey("complaint_info.complaint_id",
+            ForeignKey("basic_info.patient_id",
                       onupdate="CASCADE",
                       ondelete="CASCADE"),
             primary_key=True,
@@ -129,15 +136,17 @@ c_examination = Table(
     Column('s_organ_involved', Integer),
     Column('s_number', Integer),
     Column('s_size', Integer),
-    Column('s_status', Integer)
+    Column('s_status', Integer),
+    Column('time_created', TIMESTAMP, server_default=func.now()),
+    Column('time_updated', TIMESTAMP, onupdate=func.now())
 )
 
 # blood test table Structure
 blood_test = Table(
     'blood_test', meta,
-    Column('complaint_id',
+    Column('patient_id',
             Integer, 
-            ForeignKey("complaint_info.complaint_id",
+            ForeignKey("basic_info.patient_id",
                       onupdate="CASCADE",
                       ondelete="CASCADE"),
             primary_key=True,
@@ -150,15 +159,17 @@ blood_test = Table(
     Column('b_dc', Integer),
     Column('b_pc', Integer),
     Column('b_pt', Integer),
-    Column('b_inr', Integer)
+    Column('b_inr', Integer),
+    Column('time_created', TIMESTAMP, server_default=func.now()),
+    Column('time_updated', TIMESTAMP, onupdate=func.now())
 )
 
 # kidney test table Structure
 kidney_test = Table(
     'kidney_test', meta,
-    Column('complaint_id',
+    Column('patient_id',
             Integer, 
-            ForeignKey("complaint_info.complaint_id",
+            ForeignKey("basic_info.patient_id",
                       onupdate="CASCADE",
                       ondelete="CASCADE"),
             primary_key=True,
@@ -170,15 +181,17 @@ kidney_test = Table(
     Column('k_sp', Integer),
     Column('k_sc', Integer),
     Column('k_sca', Integer),
-    Column('k_ur', Integer)
+    Column('k_ur', Integer),
+    Column('time_created', TIMESTAMP, server_default=func.now()),
+    Column('time_updated', TIMESTAMP, onupdate=func.now())
 )
 
 # liver test table Structure
 liver_test = Table(
     'liver_test', meta,
-    Column('complaint_id',
+    Column('patient_id',
             Integer, 
-            ForeignKey("complaint_info.complaint_id",
+            ForeignKey("basic_info.patient_id",
                       onupdate="CASCADE",
                       ondelete="CASCADE"),
             primary_key=True,
@@ -189,15 +202,17 @@ liver_test = Table(
     Column('iib', Integer),
     Column('isgot', Integer),
     Column('isgpt', Integer),
-    Column('iap', Integer)
+    Column('iap', Integer),
+    Column('time_created', TIMESTAMP, server_default=func.now()),
+    Column('time_updated', TIMESTAMP, onupdate=func.now())
 )
 
 # assessment table Structure
 assessment = Table(
     'assessment', meta,
-    Column('complaint_id',
+    Column('patient_id',
             Integer, 
-            ForeignKey("complaint_info.complaint_id",
+            ForeignKey("basic_info.patient_id",
                       onupdate="CASCADE",
                       ondelete="CASCADE"),
             primary_key=True,
@@ -215,5 +230,7 @@ assessment = Table(
     Column('d_final', Integer),
     Column('s_stage', Integer),
     Column('d_factors', Integer),
-    Column('d_tp', Integer)
+    Column('d_tp', Integer),
+    Column('time_created', TIMESTAMP, server_default=func.now()),
+    Column('time_updated', TIMESTAMP, onupdate=func.now())
 )
