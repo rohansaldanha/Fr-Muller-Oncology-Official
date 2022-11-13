@@ -13,6 +13,7 @@ import datetime
 
 # for basic info table
 class Basic(BaseModel):
+    patient_id : int
     first_name : str
     last_name : str
     contact_no : str
@@ -33,6 +34,7 @@ class Basic(BaseModel):
         orm_mode = True
 
 class BasicOut(BaseModel):
+    patient_id : int
     first_name : str
     last_name : str
     contact_no : str

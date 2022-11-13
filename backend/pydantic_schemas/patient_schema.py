@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional
 
 # for patient info table
-class Patient(BaseModel):
+class Patient_Update(BaseModel):
    height : int
    weight : int
    date_time : int
