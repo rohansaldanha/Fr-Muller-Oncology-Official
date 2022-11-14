@@ -4,6 +4,7 @@ from pydantic import datetime_parse
 import datetime
 
 class Complaint_Update(BaseModel):
+    present_complaint : Optional[str]
     datetime : Optional[int]
     duration : Optional[int]
     severity : Optional[int]

@@ -1,5 +1,6 @@
 from sqlalchemy import Table
 from sqlalchemy import Integer
+from sqlalchemy import Float
 from sqlalchemy import String
 from sqlalchemy import Column
 from sqlalchemy import ForeignKey
@@ -104,6 +105,7 @@ complaint_info = Table(
             primary_key=True,
             unique=True,
             nullable=False),
+    Column('present_complaint', String),
     Column('datetime', Integer),
     Column('duration', Integer),
     Column('severity', Integer),
