@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+"""from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from .schemas import Basic,Patient
 from .database import engine, meta
@@ -81,4 +81,4 @@ async def remove_user(id: int):
     if response:
         return response
     else:
-        raise HTTPException(404, "could not remove user")
+        raise HTTPException(404, "could not remove user") """
