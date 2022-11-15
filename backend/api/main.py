@@ -2,10 +2,10 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.alchemy_models.db_meta import meta, database, engine
+from alchemy_models.db_meta import meta, database, engine
 
-from backend.Endpoints.post_endpoint import post_router
-from backend.Endpoints.get_endpoint import get_router
+from Endpoints.post_endpoint import post_router
+from Endpoints.get_endpoint import get_router
 
 app = FastAPI(title="Oncology Api")
 

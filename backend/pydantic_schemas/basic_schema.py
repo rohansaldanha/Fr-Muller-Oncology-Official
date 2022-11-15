@@ -1,14 +1,14 @@
 from pydantic import BaseModel
 from typing import Optional
 from pydantic import datetime_parse
-from backend.pydantic_schemas.patient_schema import Patient
-from backend.pydantic_schemas.complaint_schema import Complaint
-from backend.pydantic_schemas.examination_schema import Examination
-from backend.pydantic_schemas.history_schema import History
-from backend.pydantic_schemas.blood_schema import Blood
-from backend.pydantic_schemas.kidney_schema import Kidney
-from backend.pydantic_schemas.liver_schema import Liver
-from backend.pydantic_schemas.assessment_schema import Assessment
+from pydantic_schemas.patient_schema import Patient
+from pydantic_schemas.complaint_schema import Complaint
+from pydantic_schemas.examination_schema import Examination
+from pydantic_schemas.history_schema import History
+from pydantic_schemas.blood_schema import Blood
+from pydantic_schemas.kidney_schema import Kidney
+from pydantic_schemas.liver_schema import Liver
+from pydantic_schemas.assessment_schema import Assessment
 import datetime
 
 # for basic info table

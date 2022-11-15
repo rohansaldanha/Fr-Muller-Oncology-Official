@@ -1,5 +1,5 @@
 import databases
-from backend import database_connection_params
+import database_connection_params
 from sqlalchemy import create_engine
 from sqlalchemy import MetaData
 

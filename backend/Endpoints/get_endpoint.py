@@ -4,18 +4,18 @@ from fastapi import APIRouter, status, HTTPException
 from sqlalchemy import and_
 from sqlalchemy.sql import select
 
-from backend.pydantic_schemas.basic_schema import BasicOut
+from pydantic_schemas.basic_schema import BasicOut
 
-from backend.alchemy_models.models import basic_info
-from backend.alchemy_models.models import patient_info
-from backend.alchemy_models.models import patient_history
-from backend.alchemy_models.models import complaint_info
-from backend.alchemy_models.models import c_examination
-from backend.alchemy_models.models import blood_test
-from backend.alchemy_models.models import kidney_test
-from backend.alchemy_models.models import liver_test
-from backend.alchemy_models.models import assessment
-from backend.alchemy_models.db_meta import database
+from alchemy_models.models import basic_info
+from alchemy_models.models import patient_info
+from alchemy_models.models import patient_history
+from alchemy_models.models import complaint_info
+from alchemy_models.models import c_examination
+from alchemy_models.models import blood_test
+from alchemy_models.models import kidney_test
+from alchemy_models.models import liver_test
+from alchemy_models.models import assessment
+from alchemy_models.db_meta import database
 
 # APIRouter creates path operations for user module
 get_router = APIRouter(
