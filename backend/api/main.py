@@ -6,6 +6,8 @@ from alchemy_models.db_meta import meta, database, engine
 
 from Endpoints.post_endpoint import post_router
 from Endpoints.get_endpoint import get_router
+from Endpoints.update_endpoint import update_router
+from Endpoints.delete_endpoint import delete_router
 
 app = FastAPI(title="Oncology Api")
 
@@ -41,6 +43,8 @@ def hello():
 
 app.include_router(get_router)
 app.include_router(post_router)
+app.include_router(update_router)
+app.include_router(delete_router)
 
 if __name__ == '__main__':
     uvicorn.run("api.main:app", host='127.0.0.1', port=8000,
