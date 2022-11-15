@@ -10,7 +10,7 @@ from sqlalchemy import Date
 from sqlalchemy import Time
 from sqlalchemy import TIMESTAMP
 from sqlalchemy import func
-from alchemy_models.db_meta import meta
+from backend.alchemy_models.db_meta import meta
 
 
 # Basic Table Structure

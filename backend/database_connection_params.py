@@ -10,5 +10,3 @@ connection_dict = {
 # SQLALCHEMY_DATABASE_URL = f"{DB_TYPE}://{USERNAME}:{PASSWORD}@{HOST}/{DB_NAME}"
 DATABASE_URL = f"{connection_dict['DB_TYPE']}://{connection_dict['USERNAME']}:{connection_dict['PASSWORD']}@{connection_dict['HOST']}/{connection_dict['DB_NAME']}"
 
-# Async db url using asyncpg
-# DATABASE_URL = f"{connection_dict['DB_TYPE']}+asyncpg://{connection_dict['USERNAME']}:{connection_dict['PASSWORD']}@{connection_dict['HOST']}/{connection_dict['DB_NAME']}"
