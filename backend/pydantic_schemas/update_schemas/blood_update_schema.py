@@ -10,5 +10,5 @@ class Blood_Update(BaseModel):
     b_tc : Optional[int]
     b_dc : Optional[int]
     b_pc : Optional[int]
-    b_pt : Optional[int]
-    b_inr : Optional[int]
+    b_pt : Optional[float]
+    b_inr : Optional[float]
