@@ -45,5 +45,6 @@ class BasicOut(BaseModel):
     time_created: datetime.datetime
     time_updated: Optional[datetime.datetime]
 
+
     class Config:
         orm_mode = True

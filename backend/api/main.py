@@ -13,7 +13,7 @@ app = FastAPI(title="Oncology Api")
 
 # to interact with different port of backend
 origins = [
-    "http://localhost:3000",
+    "https://localhost:3000",
 ]
 
 app.add_middleware(

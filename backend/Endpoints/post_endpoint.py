@@ -23,6 +23,7 @@ post_router = APIRouter(
 @post_router.post("/create_new_record", status_code=status.HTTP_201_CREATED)
 async def create_new_record(basic: Basic):
     basic_ins = basic_info.insert().values(
+        patient_id=basic.patient_id,
         first_name=basic.first_name,
         last_name=basic.last_name,
         contact_no=basic.contact_no,
@@ -33,7 +34,6 @@ async def create_new_record(basic: Basic):
     
     patient_obj = basic.patient_patient
     patient_ins = patient_info.insert().values(
-        date_time=patient_obj.date_time,
         status=patient_obj.status,
         ecgo=patient_obj.ecgo,
         pulse=patient_obj.pulse,
@@ -79,7 +79,7 @@ async def create_new_record(basic: Basic):
     complaint_obj = basic.patient_complaint
     complaint_ins = complaint_info.insert().values(
         present_complaint=complaint_obj.present_complaint,
-        datetime=complaint_obj.datetime,
+        # datetime=complaint_obj.datetime,
         duration=complaint_obj.duration,
         severity=complaint_obj.severity
     )
