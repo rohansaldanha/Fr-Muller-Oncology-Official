@@ -3,26 +3,23 @@ from typing import Optional
 
 # for patient info table
 class Patient(BaseModel):
-   height : int
-   weight : int
-   date_time : int
-   status : int
+   status : str
    ecgo : int
    pulse : int
    bp : int
    respiration_rate : int
    temperature : int
-   pallor : int
-   jaundice : int
-   cyanosis : int
-   odema : int
-   clubbing : int
-   lymph_node : int
-   nutrition_status : int
+   pallor : str
+   jaundice : str
+   cyanosis : str
+   odema : str
+   clubbing : str
+   lymph_node : str
+   nutrition_status : str
    built : int
-   height : int
-   weight : int
+   height : float
+   weight : float
    bsa : int
-   unhealthy_habits : int
-   family_history : int
-   allergy : int
+   unhealthy_habits : str
+   family_history :str
+   allergy : str

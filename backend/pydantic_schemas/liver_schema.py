@@ -5,9 +5,9 @@ import datetime
 
 # for liver test table
 class Liver(BaseModel):
-    itb : int
-    idb : int
-    iib : int
+    itb : float
+    idb : float
+    iib : float
     isgot : int
     isgpt : int
     iap : int

@@ -6,6 +6,5 @@ import datetime
 # for complaint table
 class Complaint(BaseModel):
     present_complaint : str
-    datetime : int
     duration : int
     severity : int

@@ -4,9 +4,6 @@ from sqlalchemy import Float
 from sqlalchemy import String
 from sqlalchemy import Column
 from sqlalchemy import ForeignKey
-from sqlalchemy import CHAR
-from sqlalchemy import Boolean
-from sqlalchemy import Date
 from sqlalchemy import Time
 from sqlalchemy import TIMESTAMP
 from sqlalchemy import func

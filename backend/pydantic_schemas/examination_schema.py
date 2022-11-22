@@ -6,17 +6,17 @@ import datetime
 # for c examination table
 class Examination(BaseModel):
     i_number : int
-    i_size : int
-    i_epicenter : int
-    i_extend : int
-    i_surrounding : int
-    i_status : int
+    i_size : str
+    i_epicenter : str
+    i_extend : str
+    i_surrounding : str
+    i_status : str
     r_number : int
-    r_size : int
-    r_mobility : int
-    r_relation : int
-    r_status : int
-    s_organ_involved : int
+    r_size : str
+    r_mobility : str
+    r_relation :str
+    r_status : str
+    s_organ_involved : str
     s_number : int
-    s_size : int
-    s_status : int
+    s_size : str
+    s_status : str

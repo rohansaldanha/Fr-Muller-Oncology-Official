@@ -11,5 +11,5 @@ class Blood(BaseModel):
     b_tc : int
     b_dc : int
     b_pc : int
-    b_pt : int
-    b_inr : int
+    b_pt : float
+    b_inr : float
