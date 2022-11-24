@@ -4,7 +4,7 @@ connection_dict = {
     "USERNAME": "postgres",
     "PASSWORD": "root",
     "HOST": "localhost",
-    "DB_NAME": "frmullerfinal",
+    "DB_NAME": "fr_muller",
 }
 # 'postgresql://db_username:db_password@host_server:db_server_port/database_name?sslmode=prefer'
 # SQLALCHEMY_DATABASE_URL = f"{DB_TYPE}://{USERNAME}:{PASSWORD}@{HOST}/{DB_NAME}"

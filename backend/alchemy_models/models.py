@@ -29,7 +29,7 @@ patient_info = Table(
     'patient_info', meta,
     Column('patient_id',
             Integer, 
-            ForeignKey("basic_info.patient_id",
+            ForeignKey('basic_info.patient_id',
                       onupdate="CASCADE",
                       ondelete="CASCADE"),
             primary_key=True,

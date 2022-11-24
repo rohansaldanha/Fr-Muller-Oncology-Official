@@ -31,9 +31,12 @@ async def create_new_record(basic: Basic):
         sex=basic.sex,
         ipop_number=basic.ipop_number
     )
+    print("basic insertr-->", basic_ins)
     
     patient_obj = basic.patient_patient
     patient_ins = patient_info.insert().values(
+        patient_id=basic.patient_id,
+
         status=patient_obj.status,
         ecgo=patient_obj.ecgo,
         pulse=patient_obj.pulse,
@@ -55,9 +58,11 @@ async def create_new_record(basic: Basic):
         family_history=patient_obj.family_history,
         allergy=patient_obj.allergy
     )
+    print("patient_det -->",patient_ins)
     
     history_obj = basic.patient_history
     history_ins = patient_history.insert().values(
+        patient_id=basic.patient_id,
         hypertention=history_obj.hypertention,
         d_hypertention=history_obj.d_hypertention,
         diabetes=history_obj.diabetes,
@@ -78,6 +83,7 @@ async def create_new_record(basic: Basic):
     
     complaint_obj = basic.patient_complaint
     complaint_ins = complaint_info.insert().values(
+        patient_id=basic.patient_id,
         present_complaint=complaint_obj.present_complaint,
         # datetime=complaint_obj.datetime,
         duration=complaint_obj.duration,
@@ -86,6 +92,7 @@ async def create_new_record(basic: Basic):
 
     examination_obj = basic.patient_examination
     examination_ins = c_examination.insert().values(
+        patient_id=basic.patient_id,
         i_number=examination_obj.i_number,
         i_size=examination_obj.i_size,
         i_epicenter=examination_obj.i_epicenter,
@@ -104,6 +111,7 @@ async def create_new_record(basic: Basic):
     )
     blood_obj = basic.patient_blood
     blood_ins = blood_test.insert().values(
+        patient_id=basic.patient_id,
         b_hb=blood_obj.b_hb,
         b_pcv=blood_obj.b_pcv,
         b_esr=blood_obj.b_esr,
@@ -116,6 +124,7 @@ async def create_new_record(basic: Basic):
 
     kidney_obj = basic.patient_kidney
     kidney_ins = kidney_test.insert().values(
+        patient_id=basic.patient_id,
         k_bu=kidney_obj.k_bu,
         k_cc=kidney_obj.k_cc,
         k_ss=kidney_obj.k_ss,
@@ -127,6 +136,7 @@ async def create_new_record(basic: Basic):
     
     liver_obj = basic.patient_liver
     liver_ins = liver_test.insert().values(
+        patient_id=basic.patient_id,
         itb=liver_obj.itb,
         idb=liver_obj.idb,
         iib=liver_obj.iib,
@@ -137,6 +147,7 @@ async def create_new_record(basic: Basic):
     
     assessment_obj = basic.patient_assessment
     assessment_ins = assessment.insert().values(
+        patient_id=basic.patient_id,
         wbs_asses=assessment_obj.wbs_asses,
         clinical_findings=assessment_obj.clinical_findings,
         imaging=assessment_obj.imaging,

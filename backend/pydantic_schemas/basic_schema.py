@@ -20,7 +20,6 @@ class Basic(BaseModel):
     age : int
     sex : str
     ipop_number : int
-
     patient_patient : Patient
     patient_complaint : Complaint
     patient_examination : Examination
